@@ -1,0 +1,276 @@
+/* reset all css */
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+/* navigationbar */
+.navigation{
+    position: sticky;
+}
+.navigation{
+    /* position: relative; */
+    top: 0px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navigation::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(53, 48, 48);
+    height: 72px;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.95;
+
+}
+/* logo of navigation */
+.logo{
+    display: flex;
+    align-items: center;
+    transition: all 1.5s ease-in-out;
+   
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.logo h3{
+    font-size: 25px;
+}
+.logo:hover{
+    transform: rotate(360deg);
+}
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation li a{
+    display: block;
+    color: #f4ff73;
+    padding: 7px 50px;
+    text-decoration: none;
+    border-radius: 23px;
+}
+.navigation li a:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+.navigation input{
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    height:25px;
+}
+
+/* 1st contain */
+#home{
+    
+    height: 240px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#home button{
+    width: 7rem;
+    height: 3rem;
+    margin: 10px 10px;
+    border-radius: 12px;
+}
+#home button:hover{
+    background-color: aqua;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url(bg1.jpg) no-repeat center center/cover;
+    height:450px;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.8;
+}
+.item{
+    margin: 10px;
+}
+
+/* 2nd container */
+#services{
+    margin-top: 100px;
+    margin-bottom: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.tbox{
+    display: flex;
+}
+#services h1{
+    margin-top: 20px;
+    padding: 10px 0px;
+}
+.box img{
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgb(4, 4, 4);
+    height: 300px;
+    width: 260px;
+    margin: 20px 30px;
+    padding: 5px 10px;
+    border-radius: 23px;
+    background-color: aliceblue;
+}
+
+/* clint */
+#clint::before{
+    content: "";
+    position: absolute;
+    background: url(bg3.jpg) no-repeat center center/cover;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.7;
+    
+}
+#clint{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: centers;
+    z-index: -1;
+}
+#clint h2{
+    margin: 13px 15px;
+    font-size: 30px;
+    
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clint img{
+    margin: 10px 20px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* forms */
+#contact{
+    /* border: 2px solid red; */
+    position: relative;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 23px 23px;
+    /* margin: 14px 0px; */
+    font-size: 1.1rem;
+}
+
+#contact textarea,
+#contact input{
+    height: 2rem;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 8px;
+    
+}
+.from-group{
+    padding: 5px 5px;
+    
+    width: 40%;
+}
+#contact ::placeholder{
+    padding: 10px 5px;
+}
+#contact button{
+    margin: 10px 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: antiquewhite;
+    height: 2.2rem;
+}
+#contact button:hover{
+    background-color: rgb(48, 151, 116);
+}
+#contact::before{
+    content: "";
+    background: url(bg4.jpeg) no-repeat center center/cover;
+    position: absolute;
+    width: 100vw;
+    height: 406px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* for resposive  */
+@media (max-width:1200px){
+    .navigation{
+        flex-direction: column;
+        height: 100px;
+    }
+    
+    .navigation::before{
+        height: 100px;
+    }
+    .logo img{
+        margin: 0px 0px;
+    }
+    .navigation ul li a{
+        padding: 0px 3px;
+    }
+    #home p{
+        font-size: 20px;
+        text-align: center;
+    }
+    #none{
+        display: none;
+    }
+    .home h1{
+        margin-top: 90px;
+        font-size: 25px;
+    }
+    #services{
+        
+        flex-direction: column;
+    }
+    .tbox{
+        flex-direction: column;
+    }
+    .images{
+        flex-wrap: wrap;
+    }
+    #clint img{
+        margin: 25px 5px;
+    }
+    
+}
+@media (max-width:400px){
+    #home h1{
+        margin-top: 110px;
+        font-size: 20px;
+    }
+}
